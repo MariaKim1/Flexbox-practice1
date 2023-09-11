@@ -4,6 +4,8 @@ body {
     min-height: 100vh;
 }
 
+/* -------- GENERAL STYLING - PLACEMENT CONTAINER 1-6 ------ */
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +14,7 @@ body {
 
 
 
-/* -------- Container 1 ------ */
+/* -------- CONTAINER 1 ------ */
 /* -------- 11111111111 ------ */
 
 .container__container1 {
@@ -48,6 +50,9 @@ body {
         height: 78px;
         margin: 20px;
     }
+/* QUESTION 1: Seems like I couldn't style all boxes together which was confusing. 
+               My initial thought was to style them all under the general styling tag for box (box styling below). 
+               However all 3 boxes did not appear, but when I started adding separet styling (box 1,2,3 styling above) they all appeared in the browser window. */
 
 
 /* ------- Container 1, Box styling ------- */
@@ -58,9 +63,10 @@ body {
             align-items: flex-end;
         }
         
+/* QUESTION 2: why isn't the styling align-items working? Is there any other styling blocking it? */
 
 
-/* ------- Container 2 --------- */
+/* ------- CONTAINER 2 --------- */
 /* ------- 22222222222 --------- */
 
 .container__container2 {
@@ -81,8 +87,7 @@ body {
         background: #217a07;
         border-radius: 4px;
         width: 78px;
-        height: 78px;
-        margin: 20px;
+        height: auto;
     }
 
     .container__container2__box__box2 {
@@ -97,9 +102,13 @@ body {
         background: #217a07;
         border-radius: 4px;
         width: 78px;
-        height: 78px;
-        margin: 20px;
+        height: auto;
     }
+
+/* QUESTION 3: Whenever I give all 3 boxes the same styling they all disapear... 
+               I can style them the way I should be stylling container 5 with all boxes showing.
+               Howcome they all disappear when styling all 3 the same way??
+        
 
         
 /* ------- Container 2, Box styling ------- */
@@ -109,11 +118,12 @@ body {
             display: flex;
             justify-content: center;
             align-items: stretch;   
+
         }
 
 
 
-/* ------- Container 3 ---------- */
+/* ------- CONTAINER 3 ---------- */
 /* ------- 33333333333 --------- */
 
 .container__container3 {
@@ -165,7 +175,7 @@ body {
 
 
 
-/* ------- Container 4 ---------- */
+/* ------- CONTAINER 4 ---------- */
 /* ------- 44444444444 --------- */
 
 .container__container4 {
@@ -202,17 +212,14 @@ body {
         background: #217a07;
         border-radius: 4px;
         width: 78px;
-        height: 78px;
-        margin: 20px;
+        height: 78px; 
     }
 
 /* ------- Container 4, Box styling ------- */
 
         .container__container4__box {
-            margin: 20px;
             display: flex;
             justify-content: space-around;
-
         }
 
             .container__container4__box__box3 {
@@ -222,7 +229,7 @@ body {
 
 
 
-/* ------- Container 5 ---------- */
+/* ------- CONTAINER 5 ---------- */
 /* ------- 55555555555 --------- */
 
 .container__container5 {
@@ -243,8 +250,6 @@ body {
         background: #217a07;
         border-radius: 4px;
         width: 78px;
-        height: 78px;
-        margin: 20px;
     }
         
     .container__container5__box__box2 {
@@ -259,8 +264,6 @@ body {
         background: #217a07;
         border-radius: 4px;
         width: 78px;
-        height: 78px;
-        margin: 20px;
     }
 
 /* ------- Container 5, Box styling ------- */
@@ -280,10 +283,20 @@ body {
                 align-self: stretch;
             }
 
+/* ------- Container 5, box 1, 2 & 3, text styling ------- */
+                .some-text {
+                    text-align: center; 
+                    font-family: 'Quicksand', sans-serif;
+                    font-style: normal;
+                    font-size: 13px;
+                    color: pink
+                } 
+
+/* QUESTION 4: How to get text to align? */ 
 
 
 
-/* ------- Container 6 ---------- */
+/* ------- CONTAINER 6 ---------- */
 /* ------- 66666666666 --------- */
 
 .container__container6 {
@@ -316,6 +329,11 @@ body {
         margin: 20px;
     }
         
+/* QUESTION 5: I don't get how I can still use margins and width on box 2 but still 
+             have it respond to styling flex-grow, whereas for container 5, box 1 & 3, 
+             I needed to remove height and margins to make them able to strech. 
+             Any ideas? ^^' */
+
     .container__container6__box__box3 {
         background: #217a07;
         border-radius: 4px;
@@ -333,8 +351,15 @@ body {
             align-content: space-around;
         }
 
+
             .container__container6__box__box2 {
                 flex-grow: 2;
             }
 
+/* QUESTION 6: Throughout this styling sheet I have written the code that I THINK is correct. 
+               But the result of the code is not shown on the website. 
+               Am I using BEM the wrong way? 
+               Is there a different order in writing styling that I need apply?
+
+               It would be helpfull to see a "right way" to write this code.*/   
 
